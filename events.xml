@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="events.xsl"?>
 <events>
-  <event date="2015-06-23">
-    <action type="trying">
+  <event date="2015-06-23" id="Ndjsk3">
+    <action type="designing">
       My new daily activity log
     </action>
     <references>
       <reference src="https://github.com/joebew42/daily-activity-log" type="source" />
+      <reference src="http://tandell.com/sca" type="reference"/>
     </references>
+  </event>
+  <event date="2015-06-30" id="Ndjsasdf3">
+    <action type="crafting">
+      My new daily activity log - 2nd entry
+    </action>
+  </event>
+	<event date="2015-06-30" id="Ndjsasdf3">
+    <action type="crafting">
+      My new daily activity log - 2nd entry
+    </action>
   </event>
 </events>
