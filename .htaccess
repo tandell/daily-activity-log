@@ -1,9 +1,0 @@
-<Files allowed.php>
-	AuthType basic
-	AuthName "private area"
-	AuthUserFile /home/carran/htdocs/auth/woodworking.htpasswd 
-	Require user carran
-</Files>
-order allow,deny
-deny from all
-satisfy any
