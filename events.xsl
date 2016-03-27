@@ -17,33 +17,35 @@
       </head>
       <body>
         <div class="header fixed at-top">What's happening ...</div>
-          <div class="container update-block">
-            <div class="container flex-column" style="flex-shrink: 1;">
-              <label><small>Activity: </small></label>
-              <input list="actions" />
-            </div>
-            <datalist id="actions">
-              <!-- Generate list of actions based on the recorded ones -->
-              <xsl:call-template name="action-list" />
-            </datalist>
-            <div class="container flex-column" style="flex-grow: 1;">
-              <label><small>Description: </small></label>
-              <input type="text" id="description" />
-            </div>
+          <form action="events.php" method="post">
+            <div class="container update-block">
+              <div class="container flex-column" style="flex-shrink: 1;">
+                <label><small>Activity: </small></label>
+                <input list="actions" />
+              </div>
+              <datalist id="actions">
+                <!-- Generate list of actions based on the recorded ones -->
+                <xsl:call-template name="action-list" />
+              </datalist>
+              <div class="container flex-column" style="flex-grow: 1;">
+                <label><small>Description: </small></label>
+                <input type="text" id="description" />
+              </div>
 
-            <div class="container flex-column" style="flex-shrink: 1; ">
-              <input  type="button" onclick="addRef()" value="Add Ref" />
+              <div class="container flex-column" style="flex-shrink: 1; ">
+                <input  type="button" onclick="addRef()" value="Add Ref" />
+              </div>
+              <div class="container flex-column" style="flex-shrink: 1;">
+                <input  type="submit" value="Update" />
+              </div>
             </div>
-            <div class="container flex-column" style="flex-shrink: 1;">
-              <input  type="submit" value="Update" />
+            <div class="container reference-block" id="references">
+              <datalist id="types">
+                <!-- Generate list of references based on the recorded ones -->
+                <xsl:call-template name="reference-list" />
+              </datalist>
             </div>
-          </div>
-          <div class="container reference-block" id="references">
-            <datalist id="types">
-              <!-- Generate list of references based on the recorded ones -->
-              <xsl:call-template name="reference-list" />
-            </datalist>
-          </div>        
+          </form>    
           <xsl:apply-templates/>
       </body>
     </html>

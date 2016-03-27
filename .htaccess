@@ -1,0 +1,6 @@
+<Files success.html>
+	AuthType Basic
+	AuthName "Restricted Access"
+	AuthUserFile FQFN.htpasswd
+	Require valid-user
+</Files>
