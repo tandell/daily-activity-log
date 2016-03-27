@@ -1,4 +1,4 @@
-<Files success.html>
+<Files events.php>
 	AuthType Basic
 	AuthName "Restricted Access"
 	AuthUserFile FQFN.htpasswd
